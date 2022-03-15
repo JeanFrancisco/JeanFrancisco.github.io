@@ -1,0 +1,56 @@
+header {
+    @include flex-center;
+
+    background: linear-gradient(0deg, $bg-exp-header-start 0%, $bg-exp-header-end 100%);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+
+    transition: $sticky-effect-duration;
+
+    & ~ * {
+        margin-top: 100vh;
+        transition: $sticky-effect-duration;
+    }
+
+    &.sticky {
+        height: $nav-height;
+        z-index: 1;
+
+        & ~ * {
+            margin-top: $nav-height;
+        }
+
+        &.bg-gradient {
+            background: linear-gradient(to top,
+            $bg-stick-header-start 0%, $bg-stick-header-md 25%,
+            $bg-stick-header-end 100% );
+        }
+
+        .brand {
+            left: $body-padding;
+            font-size: 3rem;
+            font-weight: normal;
+            text-shadow: $txt-shadow-brand;
+            transform: translate(0, -35%);
+        }
+    }
+
+    &:not(.sticky) .brand {
+        animation: blinkTextCursor 500ms infinite;
+    }
+
+    .brand {
+        top: 50%;
+        left: 50%;
+        color: $header-brand-foreground;
+        position: absolute;
+        font-size: 15vw;
+        font-weight: bolder;
+        line-height: 1.1;
+
+        transform: translate(-50%, -50%);
+        transition: 0.43s;
+    }
+}

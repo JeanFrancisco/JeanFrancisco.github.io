@@ -1,0 +1,59 @@
+// Fonts Families
+$font-about-me-paragraph: 'Quicksand', sans-serif;
+$font-about-me-heading: 'Montserrat Alternates', sans-serif;
+$font-menu-item: 'Helvetica', 'Segoe UI', Tahoma, Verdana, sans-serif;
+
+// Size - Dimensions
+
+$body-padding: 23px;
+$body-height: auto;
+$body-width: 100vw;
+$nav-height: 113px;
+
+$font-size: 1.8em;
+
+$screen-xs: 480px;
+$screen-sm: 640px;
+$screen-md: 720px;
+$screen-lg: 940px;
+$screen-xl: 1024px;
+
+// Colors Palette
+
+$info: #00bcff;
+$canary: #f5be19;
+$pistache: #90be78;
+$lavander: #c5c5d1;
+$turqouise: #09E1C0;
+$aquamarine: #22c1c3;
+$second_canary: rgb(253, 187, 45);
+$second_aquamarine: rgb(34, 193, 195);
+
+$bg-neutral: #95A4C3;
+
+$bg-gradient-green-blue-start: #5dedae;
+$bg-gradient-green-blue-finish: #44d4df;
+
+$bg-gradient-orange-fuchsia-start: #ff7c5e;
+$bg-gradient-orange-fuchsia-end: #ff54b4;
+
+$bg-stick-header-start: $canary;
+$bg-stick-header-end: $aquamarine;
+$bg-stick-header-md: $pistache;
+$bg-exp-header-start: $second_canary;
+$bg-exp-header-end: $second_aquamarine;
+
+$about-me-card-foreground: #000;
+$header-brand-foreground: #83ffee;
+
+// Background - Gradients
+$brand-min-gradient: linear-gradient(2deg, #e5e5e5 15%, #83ffeee5 50%, #b0f8ef 85%, #e5e5e5);
+
+// BoxAndTxt Shadows
+$box-shadw-light-top-left: 0 10px 80px -10px rgb(44 54 92 / 20%);
+$box-shadw-light-top-right: 0 10px 80px -10px rgb(44 54 92 / 20%);
+$txt-shadow-brand: -2px 8px 15px rgba(23, 23, 23, 0.12);
+
+// Transitions Timmers - Lifetime Effects
+$sticky-effect-duration: 1s;
+$about-me-border-card-transt: 1.13s ease-out;

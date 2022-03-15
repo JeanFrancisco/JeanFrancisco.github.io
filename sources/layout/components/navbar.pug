@@ -1,0 +1,5 @@
+nav.navbar
+    ul.nav-menu
+        each menuitem in navMenu
+            li
+                a(class="menu-link" href=`${ menuitem.href }`)= menuitem.display

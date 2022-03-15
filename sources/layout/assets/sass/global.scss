@@ -1,0 +1,48 @@
+pseudo-elements {
+    content: '';
+    position: absolute;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    height: $body-height;
+    width: $body-width;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    text-decoration: overline;
+    font-family: sans;
+    font-weight: 200;
+    font-style: italic;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+
+    &::after,
+    &::before {
+        @extend pseudo-elements;
+        cursor: pointer;
+        background-color: olive;
+    }
+}

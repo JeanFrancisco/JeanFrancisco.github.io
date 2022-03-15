@@ -1,0 +1,21 @@
+doctype html
+include imports/variables
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title= 'IM a Fullstack Web Developer'
+        include imports/stylesheets
+
+    body
+        include layout/views/header
+        main
+            include layout/views/about.me.pug
+            include layout/views/skills
+            include layout/views/portfolio
+            include layout/views/contact
+        include layout/views/footer
+
+        include imports/scripts

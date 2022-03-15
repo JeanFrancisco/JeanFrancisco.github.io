@@ -1,0 +1,21 @@
+{
+  "name": "personal-site-development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pug --watch -s -b \"./public/\" sources/index.pug -o public/",
+    "compile": "tsc --watch sources/layout/assets/typescript/animate.header.ts --outFile public/assets/js/animate.header.js",
+    "preprocess": "sass --watch sources/layout/assets/sass/bootstrap.scss public/assets/css/bootstrap.css",
+    "start": "npm run compile & npm run preprocess & npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.49.9",
+    "typescript": "^4.6.2"
+  }
+}
