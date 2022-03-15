@@ -10,7 +10,6 @@ nav.navbar {
         justify-content: space-evenly;
         align-items: center;
         padding: 45px 0 45px 45px;
-
     }
 
     .nav-menu > li:nth-child(2) {
@@ -63,3 +62,30 @@ nav.navbar {
     }
 }
 
+@media screen and (max-height: $screen-sm) {
+    nav.navbar {
+        .nav-menu {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xl) {
+    nav.navbar {
+        width: 57%;
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    nav.navbar {
+        height: 100%;
+
+        .nav-menu {
+            height: 57%;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+}

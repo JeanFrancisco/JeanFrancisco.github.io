@@ -54,3 +54,34 @@ header {
         transition: 0.43s;
     }
 }
+
+@media screen and (max-height: $screen-sm) {
+    header {
+        &.sticky {
+            height: 98px;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    header {
+        height: 100vh;
+
+        &.sticky {
+            height: 94px;
+
+            nav {
+                display: none;
+            }
+
+            .brand {
+                top: 43%;
+            }
+        }
+
+        .brand {
+            font-size: 13.5vw;
+            transform: translate(-70%, 33%);
+        }
+    }
+}
