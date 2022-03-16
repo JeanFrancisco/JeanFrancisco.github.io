@@ -1,6 +1,6 @@
 nav.navbar {
     position: absolute;
-    top: 5px;
+    top: 4%;
     right: 50px;
     width: 50%;
     height: 70px;
@@ -73,6 +73,7 @@ nav.navbar {
 
 @media screen and (max-width: $screen-xl) {
     nav.navbar {
+        top: 3%;
         width: 57%;
     }
 }

@@ -1,5 +1,5 @@
 section.about-me {
-    @include flex-justified-stretch;
+    @include flex-justified-center;
     position: relative;
     padding: $nav-height 5%;
     height: 100vh;
@@ -31,17 +31,65 @@ section.about-me {
     }
 
     img.complete-avatar {
-        top: 0;
-        left: 70%;
+        margin-bottom: 5%;
         max-width: 30%;
-        position: absolute;
         z-index: 4;
 
-        transform: translateX(-30%);
         transition: 0.34s ease-out;
+        transform: scale(120%);
 
         &:hover {
             transform: scale(140%);
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xxl) {
+    section.about-me {
+        padding: 0 5%;
+
+        .card {
+            padding: 70px;
+        }
+
+        .carousel {
+            width: 85%;
+        }
+
+        .title {
+            font-size: 3.74em;
+        }
+
+        img.complete-avatar {
+            transform: scale(150%);
+            max-width: 25%;
+
+            &:hover {
+                transform: scale(175%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xl) {
+    section.about-me {
+        .title {
+            font-size: 3.25em;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    section.about-me {
+        flex-direction: column;
+        padding: 5%;
+
+        img.complete-avatar {
+            max-width: 30%;
+    
+            &:hover {
+                transform: scale(180%);
+            }
         }
     }
 }
