@@ -32,8 +32,11 @@ header {
             left: $body-padding;
             font-size: 3rem;
             font-weight: normal;
+            font-family: $font-friendly;
             text-shadow: $txt-shadow-brand;
             transform: translate(0, -35%);
+
+            transition: .93s ease-out;
         }
     }
 
@@ -47,11 +50,11 @@ header {
         color: $header-brand-foreground;
         position: absolute;
         font-size: 15vw;
-        font-weight: bolder;
+        font-family: $font-principal;
         line-height: 1.1;
 
         transform: translate(-50%, -50%);
-        transition: 0.43s;
+        transition: 0.47s;
     }
 }
 

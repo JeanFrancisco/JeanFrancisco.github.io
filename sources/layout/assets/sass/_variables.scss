@@ -1,7 +1,16 @@
 // Fonts Families
-$font-about-me-paragraph: 'Quicksand', sans-serif;
-$font-about-me-heading: 'Montserrat Alternates', sans-serif;
-$font-menu-item: 'Helvetica', 'Segoe UI', Tahoma, Verdana, sans-serif;
+$font-raleway: 'Raleway', sans-serif;
+$font-comfortaa: 'Comfortaa', cursive;
+$font-quicksand: 'Quicksand', sans-serif;
+$font-alternate: 'Montserrat Alternates', sans-serif;
+
+$font-principal: $font-raleway;
+$font-friendly: $font-comfortaa;
+$font-leading: $font-quicksand;
+
+$font-menu-item: $font-leading;
+$font-about-me-heading: $font-alternate;
+$font-about-me-paragraph: $font-leading;
 
 // Size - Dimensions
 
