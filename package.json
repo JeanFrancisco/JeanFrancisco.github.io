@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "pug --watch -s -b \"./public/\" sources/index.pug -o public/",
-    "compile": "tsc --watch sources/layout/assets/typescript/animate.header.ts --outFile public/assets/js/animate.header.js",
+    "compile": "tsc --watch sources/layout/assets/typescript/*.ts --outDir public/assets/js/",
     "preprocess": "sass --watch sources/layout/assets/sass/bootstrap.scss public/assets/css/bootstrap.css",
     "start": "npm run compile & npm run preprocess & npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
