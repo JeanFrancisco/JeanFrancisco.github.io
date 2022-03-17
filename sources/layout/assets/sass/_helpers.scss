@@ -47,24 +47,6 @@
     justify-content: $justify;
 }
 
-@mixin flex-justified-center {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-@mixin flex-justified-stretch {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-@mixin flex-justified-baseline {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-}
-
 @mixin position-absolute-center {
     top: 50%;
     left: 50%;

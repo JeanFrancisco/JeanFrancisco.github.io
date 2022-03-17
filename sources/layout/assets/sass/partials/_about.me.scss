@@ -1,5 +1,5 @@
 section.about-me {
-    @include flex-justified-center;
+    @include flexbox($justify: space-between, $alignment: center);
     position: relative;
     padding: $nav-height 5%;
     height: 100vh;
