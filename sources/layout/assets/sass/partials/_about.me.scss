@@ -12,8 +12,12 @@ section.about-me {
     .card {
         color: $about-me-card-foreground;
         padding: 110px 100px;
-        border-radius: 10px;
-        @extend .box-shadow-light-top-right;
+        
+        &:not(.expand-out) {
+            border-radius: 15px;
+
+            @extend .box-shadow-light-top-right;
+        }
 
         transition: $about-me-border-card-transt;
     }
@@ -35,10 +39,9 @@ section.about-me {
         max-width: 30%;
         z-index: 4;
 
-        transition: 0.34s ease-out;
-        transform: scale(120%);
+        transition: 0.43s linear;
 
-        &:hover {
+        &.expand-out {
             transform: scale(140%);
         }
     }
@@ -64,7 +67,7 @@ section.about-me {
             transform: scale(150%);
             max-width: 25%;
 
-            &:hover {
+            &.expand-out {
                 transform: scale(175%);
             }
         }
@@ -85,11 +88,27 @@ section.about-me {
         padding: 5%;
 
         img.complete-avatar {
-            max-width: 30%;
-    
-            &:hover {
-                transform: scale(180%);
+            max-width: 50%;
+
+            &.expand-out {
+                transform: scale(110%);
             }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    section.about-me {
+        .card {
+            padding: 70px 30px;
+        }
+
+        .title {
+            font-size: 2.3em;
+        }
+
+        .paragraph {
+            font-size: 1.3em;
         }
     }
 }

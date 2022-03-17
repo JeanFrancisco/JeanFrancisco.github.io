@@ -100,3 +100,12 @@ header {
         }
     }
 }
+
+@media screen and (max-width: $screen-md) {
+    header {
+        .brand {
+            top: auto;
+            bottom: 33%;
+        }
+    }
+}
