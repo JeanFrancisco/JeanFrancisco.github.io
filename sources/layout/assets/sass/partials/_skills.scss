@@ -1,0 +1,52 @@
+section.my-skills {
+    @include flexbox;
+    @extend .full-viewport;
+
+    flex-wrap: wrap;
+    padding: $body-padding;
+
+    .container.box {
+        @include flexbox($alignment: center, $justify: space-around);
+
+        flex: 0 0 400px;
+        flex-direction: column;
+        height: 300px;
+        margin: 3% 5%;
+ 
+        .image {
+            @extend .flex-center;
+
+            @include pseudo-elements {
+                &.circle::after {
+                    @extend .circle;
+                    height: 100px;
+                    width: 100px;
+                }
+
+                &::after {
+                    color: yellow;
+                    content: '</>';
+                    background: darkblue;
+
+                    font-size: 3em;
+                    font-weight: 500;
+                    line-height: 1.94;
+                    text-align: center;
+                }
+            };
+        }
+
+        &:nth-child(odd) {
+            margin-top: 7%;
+
+            .image {
+                @include pseudo-elements {
+                    &::after {
+                        content: 'JS';
+                        background: red;
+                    }
+                }
+            }
+        }
+    }
+}

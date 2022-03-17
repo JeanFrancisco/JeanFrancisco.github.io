@@ -1,8 +1,3 @@
-pseudo-elements {
-    content: '';
-    position: absolute;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -37,11 +32,11 @@ img {
 input[type="radio"],
 input[type="checkbox"] {
     appearance: none;
-    position: relative;
+
+    @include pseudo-elements;
 
     &::after,
     &::before {
-        @extend pseudo-elements;
         cursor: pointer;
         background-color: olive;
     }

@@ -1,2 +1,6 @@
 section.my-skills#my-skills
-    .container.box
+    each skill in mySkills
+        .container.box
+            img.image.circle(src=`${ skill.imageSrc }`, alt=`${ skill.name } icon.`)
+            h3.skill-name= skill.name
+            p.descript= skill.description

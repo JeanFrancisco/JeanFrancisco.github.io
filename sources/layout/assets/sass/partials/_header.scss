@@ -1,5 +1,5 @@
 header {
-    @include flex-center;
+    @extend .flex-center;
 
     background: linear-gradient(0deg, $bg-exp-header-start 0%, $bg-exp-header-end 100%);
     position: fixed;

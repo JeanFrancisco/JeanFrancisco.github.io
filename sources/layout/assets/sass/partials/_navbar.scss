@@ -21,13 +21,12 @@ nav.navbar {
         font-size: 1.23rem;
         font-family: $font-menu-item;
         letter-spacing: 1px;
-        position: relative;
         padding: 10px 20px;
+
+        @include pseudo-elements;
 
         &::before,
         &::after {
-            @extend pseudo-elements;
-
             width: 20px;
             height: 10px;
             opacity: 0;
