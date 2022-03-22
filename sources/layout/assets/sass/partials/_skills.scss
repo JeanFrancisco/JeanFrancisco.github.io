@@ -8,19 +8,21 @@ section.my-skills {
     .container.box {
         @include flexbox($alignment: center, $justify: space-around);
 
-        flex: 0 0 400px;
+        flex: 0 0 calc( (90% - $body-padding) / 3);
         flex-direction: column;
         height: 300px;
-        margin: 3% 5%;
+        margin: 3% 2.5%;
  
         .image {
             @extend .flex-center;
+            height: $skills-circle;
 
             @include pseudo-elements {
+
                 &.circle::after {
                     @extend .circle;
-                    height: 100px;
-                    width: 100px;
+                    height: $skills-circle;
+                    width: $skills-circle;
                 }
 
                 &::after {
@@ -46,6 +48,58 @@ section.my-skills {
                         background: red;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xxl) {
+    section.my-skills {
+        .container.box {
+            flex-basis: calc( (97% - $body-padding) / 3);
+
+            &:nth-child(3n+1) {
+                margin-left: 0;
+            }
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xl) {
+    section.my-skills {
+        justify-content: space-around;
+
+        .container.box {
+            flex-basis: calc( (95% - $body-padding) / 2);
+
+            &:nth-child(even),
+            &:nth-child(odd) {
+                margin: 4% 0;
+            }
+
+            .skill-name {
+                margin: 10px 0;
+            }
+
+            .description {
+                height: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    section.my-skills {
+        flex-direction: column;
+        height: auto;
+
+        .container.box {
+            .description {
+                text-align: center;
             }
         }
     }

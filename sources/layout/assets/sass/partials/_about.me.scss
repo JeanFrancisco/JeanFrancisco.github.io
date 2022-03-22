@@ -1,7 +1,7 @@
 section.about-me {
     @include flexbox($justify: space-between, $alignment: center);
     position: relative;
-    padding: $nav-height 5%;
+    padding: $nav-height $body-padding;
     height: 100vh;
     width: 100%;
 
@@ -37,11 +37,13 @@ section.about-me {
     img.complete-avatar {
         margin-bottom: 5%;
         max-width: 30%;
+        opacity: 0.3;
         z-index: 4;
 
         transition: 0.5s linear;
 
         &.expand-out {
+            opacity: 1;
             transform: scale(140%);
         }
     }
@@ -77,7 +79,7 @@ section.about-me {
 @media screen and (max-width: $screen-xl) {
     section.about-me {
         .title {
-            font-size: 3.25em;
+            font-size: 3.2em;
         }
     }
 }
@@ -86,6 +88,14 @@ section.about-me {
     section.about-me {
         flex-direction: column;
         padding: 5%;
+
+        .carousel {
+            width: 100%;
+        }
+
+        .paragraph {
+            font-size: 1.3em;
+        }
 
         img.complete-avatar {
             max-width: 50%;
@@ -105,10 +115,6 @@ section.about-me {
 
         .title {
             font-size: 2.3em;
-        }
-
-        .paragraph {
-            font-size: 1.3em;
         }
     }
 }
