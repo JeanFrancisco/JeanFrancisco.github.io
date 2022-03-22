@@ -44,8 +44,7 @@ section.my-skills {
         }
 
         .description {
-            font-family: $font-quicksand;
-            font-size: 1.1em;
+            font: 1.1em / 1.4 $font-quicksand;
         }
 
         &:nth-child(odd) {
