@@ -1,20 +1,19 @@
 section.my-skills {
-    @include flexbox;
-    @extend .full-viewport;
-
-    flex-wrap: wrap;
     padding: $body-padding;
+    min-height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 2.5%;
 
     .container.box {
         @include flexbox($alignment: center, $justify: space-around);
 
-        flex: 0 0 calc( (90% - $body-padding) / 3);
         flex-direction: column;
         height: 300px;
-        margin: 3% 2.5%;
 
         .image {
             @extend .flex-center;
+
             height: $skills-circle;
 
             @include pseudo-elements {
@@ -44,6 +43,7 @@ section.my-skills {
         }
 
         .description {
+            height: 40%;
             font: 1.1em / 1.4 $font-quicksand;
         }
 
@@ -65,9 +65,8 @@ section.my-skills {
 @media screen and (max-width: $screen-xxl) {
     section.my-skills {
         .container.box {
-            justify-content: space-evenly;
-            flex-basis: calc( (97% - $body-padding) / 3);
             height: 370px;
+            justify-content: space-evenly;
 
             &:nth-child(3n+1) {
                 margin-left: 0;
@@ -82,10 +81,12 @@ section.my-skills {
 
 @media screen and (max-width: $screen-xl) {
     section.my-skills {
-        justify-content: space-around;
+        gap: 5%;
+        padding-top: 0;
+        grid-template-columns: repeat(2, 1fr);
 
         .container.box {
-            flex-basis: calc( (95% - $body-padding) / 2);
+            justify-content: space-between;
 
             &:nth-child(even),
             &:nth-child(odd) {
@@ -97,7 +98,21 @@ section.my-skills {
             }
 
             .description {
-                height: 40%;
+                height: 55%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    section.my-skills {
+        row-gap: 0;
+        margin-top: 10%;
+        padding-top: $body-padding;
+
+        .container.box {
+            .description {
+                text-align: center;
             }
         }
     }
@@ -105,12 +120,21 @@ section.my-skills {
 
 @media screen and (max-width: $screen-md) {
     section.my-skills {
-        flex-direction: column;
-        height: auto;
+        gap: 5%;
+        padding-top: 0;
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
 
         .container.box {
+            height: fit-content;
+
             .description {
-                text-align: center;
+                height: 40%;
+            }
+
+            &:nth-child(even),
+            &:nth-child(odd) {
+                margin: 0;
             }
         }
     }
