@@ -1,0 +1,29 @@
+.carousel {
+    position: relative;
+
+    .carousel-item {
+        position: absolute;
+        margin-top: -20%;
+        width: 100%;
+
+        &:not(.slide-active) {
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-xl) {
+    .carousel {
+        .carousel-item {
+            margin-top: -25%;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .carousel {
+        .carousel-item {
+            margin-top: 0;
+        }
+    }
+}
