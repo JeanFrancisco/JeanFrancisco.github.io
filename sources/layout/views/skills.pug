@@ -3,4 +3,10 @@ section.my-skills#my-skills
         .container.box
             img.image.circle(src=`${ skill.imageSrc }`, alt=`${ skill.name } icon.`)
             h3.skill-name= skill.name
-            p.description= skill.description
+            p.description !{skill.description}
+    .languages.box
+        h2 Languages skillset
+        each lang in languages
+            h3.lang-name= lang.name
+            .progress-bar(style= `--data-percent:${lang.percent}%`)
+            p.description= lang.includes.join(' / ')

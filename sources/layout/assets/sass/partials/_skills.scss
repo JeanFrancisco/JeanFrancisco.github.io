@@ -39,12 +39,13 @@ section.my-skills {
 
         .skill-name {
             font-weight: bolder;
-            font-family: $font-alternate;
+            font-family: $font-raleway;
+            text-shadow: 0 0 0 rgb(0 0 0 / .95);
         }
 
         .description {
             height: 40%;
-            font: 1.1em / 1.4 $font-quicksand;
+            font: 1.135em / 1.5 $font-quicksand;
         }
 
         &:nth-child(odd) {
@@ -58,6 +59,47 @@ section.my-skills {
                     }
                 }
             }
+        }
+    }
+
+    .languages.box {
+        @include flexbox($justify: space-evenly, $alignment: flex-start);
+
+        flex-direction: column;
+        grid-column: 1/-1;
+        background: $bg-gradient-languages;
+
+        margin: 0 -100%;
+        padding: 5% 100%;
+        height: calc( 100vh - $body-padding );
+
+        h2 {
+            color: #fff;
+            font-size: 2.4em;
+            font-family: $font-alternate;
+            font-variant: small-caps;
+            margin-bottom: 30px;
+        }
+
+        .lang-name {
+            margin-top: 3px;
+            color: #fff;
+            font: normal 1.3em $font-comfortaa;
+        }
+
+        .progress-bar {
+            width: 70%;
+            height: 17px;
+            background: $bg-gradient-progress-bar;
+
+            transition: .13s all;
+        }
+
+        .description {
+            font: 1.04em $font-alternate;
+            color: #fff;
+            letter-spacing: 0.97px;
+            margin-bottom: 4px;
         }
     }
 }
@@ -74,6 +116,12 @@ section.my-skills {
 
             &:nth-child(3n+3) {
                 margin-right: 0;
+            }
+        }
+
+        .languages.box {
+            .progress-bar {
+                width: 75%;
             }
         }
     }
@@ -101,6 +149,12 @@ section.my-skills {
                 height: 55%;
             }
         }
+
+        .languages.box {
+            .description {
+                font-size: 1.02em;
+            }
+        }
     }
 }
 
@@ -111,8 +165,21 @@ section.my-skills {
         padding-top: $body-padding;
 
         .container.box {
+            .skill-name,
             .description {
                 text-align: center;
+            }
+        }
+
+        .languages.box {
+            .lang-name {
+                font-size: 1.2em;
+            }
+
+            .description {
+                letter-spacing: normal;
+                font-size: 1em;
+                color: #eee;
             }
         }
     }
@@ -135,6 +202,31 @@ section.my-skills {
             &:nth-child(even),
             &:nth-child(odd) {
                 margin: 0;
+            }
+        }
+
+        .languages.box {
+            .lang-name {
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-sm) {
+    section.my-skills {
+        .languages.box {
+            .lang-name {
+                font-size: 1.17em;
+            }
+
+            .progress-bar {
+                height: 11px;
+                width: 100%;
+            }
+
+            .description {
+                color: #e4e4e4;
             }
         }
     }

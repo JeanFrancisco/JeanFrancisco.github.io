@@ -2,7 +2,7 @@
     let navMenu= [
         { display: 'Home', href: "#!", },
         { display: 'About Me', href: "#about-me", },
-        { display: 'Skills', href: "#my-skills", },
+        { display: 'My Skills', href: "#my-skills", },
         { display: 'Portfolio', href: "#portfolio", },
         { display: 'Contact', href: "#contact", },
     ];
@@ -10,17 +10,73 @@
     let avatarCompleteImage='./images/Tree-PNG-Background.png';
 
     let mySkills= [
-        { imageSrc: '', name: 'React', description: `Incluye librerías como React-Router-Dom, Styled Components,
-            Custom React Hooks e Integraciones con Redux, Sass, Axios.` },
-        { imageSrc: '', name: 'JavaScript', description: `JavaScript incluye implementaciones en Web con React JS,
-            jQuery, Axios, Redux. Y usos de Fetch API, Event Listeners, etc.` },
-        { imageSrc: '', name: 'PHP', description: `PHP incluye su uso en Servidor Web Apache, y en menor medida Nginx.
-            Además de las funciones nativas de PHP. Se ha implementado en CMS como WordPress.
-            Y también con frameworks como: Laravel, Symfony.` },
-        { imageSrc: '', description: `HTML5 incluye manejo de etiquetas Web Semánticas, atributos para mejorar la Accesibilidad.
-            Y en general, optimizaciones SEO de la web.` },
-        { imageSrc: '', description: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Vitae harum voluptatem tempora fuga sapiente cumque fugiat, dolores porro,
-            assumenda velit laudantium odit eum rem cupiditate, repellat sit ab a
-            facere!`},
+        { imageSrc: '', name: 'Teamwork', description: `<em>Flexible</em>, con buena comunicación y abierto al trabajo
+        en equipo. Apertura a la retroalimentación, compartiendo opiniones, y en un ambiente de continua y oportuna
+        revisión del código.` },
+        { imageSrc: '', name: 'FullStack Development', description: `Una mezcla de <strong>Frontend + Backend +
+        Databases</strong> hasta <strong>IT Operations</strong> pero aún a un nivel Middle - Junior.` },
+        { imageSrc: '', name: 'Attention to Detail', description: `<strong><em>Perfect match & optimized aplication</em>
+        </strong> de estilo y/o diseño, basado en un mockup/wireframe, a su respectiva implementación en Web.` },
+        { imageSrc: '', name: 'Inspect & Debug', description: `<strong>Análisis y Resolución de problemas</strong>
+        o errores con el apoyo de herramientas de Depuración e Inspección Profesionales.` },
+        { imageSrc: '', name: 'Clean Code', description: `Código limpio, poco verboso, expresivo y con buena
+        <em>indentation</em>; inspirado en código de proyectos Open Source profesionales como Laravel o HAML.` },
+        { imageSrc: '', name: 'CI +/ CD', description: `<em><strong>Continuos Integration + Continuos Deployment
+        </strong></em> Experiencia en ambientes de integración continua y depliegues continuos a producción | pruebas.` },
+        { imageSrc: '', name: 'VCS', description: `Sistema de Control de versiones soportado por herramientas de control
+        de versiones como: <strong>Git</strong> + <em>Cloud Repositories</em>` },
+        { imageSrc: '', name: 'Testing', description: `Creación de <strong>Pruebas unitarias y de integración</strong> con
+        la configuración necesaria para su ejecución automatizada.` },
+        { imageSrc: '', name: 'OOP + EDP', description: `Paradigma de <strong>Programación Orientada a Objetos</strong>, con
+        creación de instancias de clases. Y además, su correspondiente vinculación con diversos ORMs. <em>También</em>, 
+        Programación Dirigida por Eventos o Programación Funcional.` },
+        { imageSrc: '', name: 'MVC + Flux', description: `Diversos <strong>Patrones de Diseño de Software</strong> entre ellos
+        el patrón Modelo-Vista-Controlador, Flux, entre otros.` },
+    ];
+
+    let languages= [
+        {
+            name: 'PHP',
+            includes: [
+                'Composer',
+                'Laravel (Eloquent, Blade)',
+                'Symfony (Doctrine, Twig)',
+                'Apache',
+                'WordPress (Custom Plugins + Custom Themes)'
+            ],
+            percent: 90
+        },
+        {
+            name: 'JavaScript',
+            includes: ['NPM', 'Yarn', 'jQuery', 'React JS', 'Redux', 'Axios', 'JWT', 'Express', 'Node.js', 'JSON', 'GraphQL'],
+            percent: 70
+        },
+        {
+            name: 'HTML5',
+            includes: ['Semantic Web', 'Accessible Attributes'],
+            percent: 80
+        },
+        {
+            name: 'CSS3',
+            includes: [
+                'CSS Styles',
+                'CSS Position',
+                'Media Queries',
+                'Grid Layout',
+                'Flexbox',
+                'CSS Transitions & Animations',
+                'BEM Metodology'
+            ],
+            percent: 80
+        },
+        {
+            name: 'SQL',
+            includes: ['MySQL / MariaDB', 'SQL Server', 'CRUD Operations', 'JOIN Selects', 'Bulk Operations', 'Stored Procedures' ],
+            percent: 55,
+        },
+        {
+            name: 'Java / C#',
+            includes: ['Java SE', '.NET Core'],
+            percent: 30
+        }
     ];

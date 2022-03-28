@@ -5,8 +5,8 @@ $font-comfortaa: 'Comfortaa', cursive;
 $font-quicksand: 'Quicksand', sans-serif;
 $font-alternate: 'Montserrat Alternates', sans-serif;
 
-$font-principal: $font-poiret;
-$font-friendly: $font-raleway;
+$font-principal: $font-raleway;
+$font-friendly: $font-poiret;
 $font-leading: $font-quicksand;
 
 $font-menu-item: $font-leading;
@@ -27,8 +27,8 @@ $screen-xxs: 360px;
 $screen-xs: 480px;
 $screen-sm: 640px;
 $screen-md: 720px;
-$screen-lg: 940px;
-$screen-xl: 1024px;
+$screen-lg: 960px;
+$screen-xl: 1280px;
 $screen-xxl: 1360px;
 
 // Colors Palette
@@ -60,6 +60,8 @@ $about-me-card-foreground: #000;
 $header-brand-foreground: #83ffee;
 
 // Background - Gradients
+$bg-gradient-languages: linear-gradient(45deg, $bg-gradient-orange-fuchsia-start, $bg-gradient-orange-fuchsia-end);
+$bg-gradient-progress-bar: linear-gradient(120deg, #ddd, #fff var(--data-percent), rgb(200 32 90 /.3) var(--data-percent));
 $brand-min-gradient: linear-gradient(2deg, #e5e5e5 15%, #83ffeee5 50%, #b0f8ef 85%, #e5e5e5);
 
 // BoxAndTxt Shadows
