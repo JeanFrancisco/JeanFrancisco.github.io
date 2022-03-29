@@ -43,6 +43,7 @@ $second_canary: rgb(253, 187, 45);
 $second_aquamarine: rgb(34, 193, 195);
 
 $bg-neutral: #95A4C3;
+$bg-progress-bar: rgb(200 32 90 /.3);
 
 $bg-gradient-green-blue-start: #5dedae;
 $bg-gradient-green-blue-finish: #44d4df;
@@ -61,7 +62,7 @@ $header-brand-foreground: #83ffee;
 
 // Background - Gradients
 $bg-gradient-languages: linear-gradient(45deg, $bg-gradient-orange-fuchsia-start, $bg-gradient-orange-fuchsia-end);
-$bg-gradient-progress-bar: linear-gradient(120deg, #ddd, #fff var(--data-percent), rgb(200 32 90 /.3) var(--data-percent));
+$bg-gradient-progress-bar: linear-gradient(120deg, #ddd, #fff var(--data-percent), transparent var(--data-percent));
 $brand-min-gradient: linear-gradient(2deg, #e5e5e5 15%, #83ffeee5 50%, #b0f8ef 85%, #e5e5e5);
 
 // BoxAndTxt Shadows
