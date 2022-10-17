@@ -5,80 +5,153 @@ const header = document.querySelector('header');
 const brand = document.querySelector('.brand');
 const reset = document.querySelectorAll('a[href="#!"]');
 
-
-class AutoText {
-    full_text: string;
-    print_text: string = '';
-    is_deleting: boolean = false;
-
-    constructor(full_text: string) {
-        this.full_text = full_text;
+class PrintableText {
+    constructor(private readonly text:string, private printable_at: ( HTMLElement | undefined )) {
     }
 
-    updateTextForPrint() {
-        let length_printed: number = this.print_text.length;
+    printableArea(html_elemnt: HTMLElement) {
+        this.printable_at = html_elemnt;
+    }
 
-        if (this.isComplete())
+    getPrintableArea(): HTMLElement | undefined {
+        return this.printable_at;
+    }
+
+    print: ( () => void ) = function () {
+        if( Boolean(this.printable_at) )
+            this.printable_at.innerText = this.text;
+        else
+            throw new ReferenceError('Please. Assign a printable area to this text. Its printable area is undefined.');
+    }
+}
+interface AutoOutput {
+    readonly start_empty: boolean;
+    readonly infinity_loop: boolean;
+    readonly start_delay_ms: number;
+    readonly step_sleep_ms: number;
+
+    updateOutput:() => void;
+}
+class AutomaticallyPrintableText extends PrintableText implements AutoOutput {
+
+    displayed_text: string;
+    is_deleting: boolean;
+    next: AutomaticallyPrintableText;
+
+    constructor(readonly full_text:string,
+        printable_area: HTMLElement,
+        readonly start_empty:boolean = true,
+        readonly infinity_loop: boolean = true,
+        readonly start_delay_ms:number = 200,
+        readonly step_sleep_ms:number = 200) {
+
+            super(full_text, printable_area);
+
+            if(start_empty) {
+                this.is_deleting = false;
+                this.displayed_text = '';
+            }
+            else {
+                this.is_deleting = true;
+                this.displayed_text = this.full_text;
+            }
+
+        }
+
+    print: ( () => void ) = function () {
+        if( Boolean(this.printable_at) )
+            this.printable_at.innerText = this.displayed_text;
+        else
+            throw new ReferenceError('Please. Assign a printable area to this text. Its printable area is undefined.');
+    }
+
+    updateOutput() {
+        if( this.isCompletePrinted() )
             this.is_deleting = true;
 
-        if (this.isPrintEmpty())
+        if( this.isEmptyPrinted() )
             this.is_deleting = false;
 
-        if (this.is_deleting)
-            this.print_text = this.full_text.slice(0, length_printed - 1);
-        // this.print_text = this.full_text.substring( 0, length_printed - 1 );
+        let current_length:number = this.displayed_text.length;
+        
+        if( this.is_deleting )
+            this.displayed_text = this.full_text.slice(0, current_length - 1);
+            // this.print_text = this.full_text.substring( 0, length_printed - 1 );
         else
-            this.print_text = this.full_text.slice(0, length_printed + 1);
-        // this.print_text = this.full_text.substring( 0, length_printed + 1);
+            this.displayed_text = this.full_text.slice(0, current_length + 1);
+            // this.print_text = this.full_text.substring( 0, length_printed + 1 );
+        
     }
 
-    isPrintEmpty(): boolean { return this.print_text.length === 0 };
-
-    isComplete(): boolean { return this.print_text === this.full_text };
-
-    autoPrintWith(fnPrint) {
+    autoPrintWith: (Function) => void = function ( fnPrint: (obj: AutomaticallyPrintableText) => void ) {
         fnPrint(this);
-    }
-}
-class AutoTextNode extends AutoText {
-    next;
+    };
 
-    constructor(full_text, next = undefined) {
-        super(full_text);
-        this.next = next;
-    }
-
-    setNext(nextNode) { this.next = nextNode; }
+    isEmptyPrinted(): boolean { return this.displayed_text.length === 0 };
+    isCompletePrinted():boolean { return this.displayed_text === this.full_text };
 }
 
-const autoTypeAtElement = (typeText, speed_ms = 100, delay_ms = 0) => {
-    setTimeout( () => {
-        typeText.updateTextForPrint();
+function autoTypeAtElement(text:string, elemnt: HTMLElement) {
+    const autotypeTxtObj = new AutomaticallyPrintableText(text, elemnt);
 
-        typeText.autoPrintWith( automaticPrint )
-
-        const nextTextToType = /* typeText.isPrintEmpty() ? typeText.next :  */typeText;
-
-        if( nextTextToType.isComplete() )
-
-            setTimeout( () => {
-                autoTypeAtElement( nextTextToType, speed_ms, delay_ms );
-            }, speed_ms + delay_ms);
-
-        else
-            autoTypeAtElement( nextTextToType, speed_ms, delay_ms );
-    }, speed_ms );
+    autotypeTxtObj.autoPrintWith(animatedPrintingText);
 }
 
-function automaticPrint(autoTextObj) {
-    const elem_html = getHTMLElementContainerAutoMessage();
+function animatedPrintingText(autoTxtObj: AutomaticallyPrintableText) {
+    setTimeout(() => {
+        const word_active_timming = setInterval(() => {
 
-    if (!elem_html) return;
+            const printable_area = autoTxtObj.getPrintableArea();
 
-    // apply updated styles
-    // elem_html.style['font-size'] = `calc(${autoTextObj.print_text.length * 71}vw/( ${autoTextObj.print_text.length * autoTextObj.print_text.length} )`;
+            if( autoTxtObj.isEmptyPrinted() && autoTxtObj.is_deleting ) {
+                clearInterval(word_active_timming);
 
-    elem_html.textContent = autoTextObj.print_text;
+                if(autoTxtObj.next === undefined)
+                    automaticPrintBannerWelcomeText();
+                else
+                    autoTxtObj.next.autoPrintWith(animatedPrintingText);
+            }
+            else if( ! printable_area.parentElement.classList.contains('sticky') ) {
+                autoTxtObj.updateOutput();
+                autoTxtObj.print();
+
+                animateAreaStyling(printable_area, autoTxtObj.displayed_text.length);
+            }
+            else {
+                resetArea(printable_area);
+            }
+
+        }, autoTxtObj.step_sleep_ms);
+    }, autoTxtObj.start_delay_ms);
+}
+
+function animateAreaStyling(printable_area: HTMLElement, factor: number) {
+    printable_area.style['font-size'] = `calc(${ factor * 71 }vw/( ${ factor * factor } )`;    
+}
+
+function resetArea(area: HTMLElement) {
+    area.style['font-size'] = '';
+}
+
+window.addEventListener('load', automaticPrintBannerWelcomeText);
+
+function automaticPrintBannerWelcomeText() {
+    const area_HTML = getHTMLElementContainerAutoMessage();
+
+    const text_chain = ['Welcome', "I'm dev", "Jean Francesco"];
+
+    const printable = text_chain.reduceRight((previous: AutomaticallyPrintableText, txt:string) => {
+
+        let new_object = new AutomaticallyPrintableText(txt, area_HTML);
+
+        if( previous.full_text !== '')
+            new_object.next = previous;
+
+        return new_object;
+
+    }, new AutomaticallyPrintableText('', area_HTML));
+
+    printable.autoPrintWith(animatedPrintingText);
 }
 
 function getHTMLElementContainerAutoMessage():HTMLElement {
@@ -88,10 +161,6 @@ function getHTMLElementContainerAutoMessage():HTMLElement {
 function resetScroll() {
     window.scrollTo(0, 0);
 }
-
-window.addEventListener('load', () => {
-    autoTypeAtElement(new AutoTextNode('Welcome!'), 200, 300);
-});
 
 window.addEventListener('scroll', () => {
     const setSticky = window.scrollY > 1;
