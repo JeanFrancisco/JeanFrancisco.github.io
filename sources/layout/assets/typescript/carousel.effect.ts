@@ -48,5 +48,5 @@ window.addEventListener('load', () => {
         updateCurrentActive: updateCurrentActive,
     };
 
-    launchCarrouselTimmer(carrousel);
+    launchCarrouselTimmer(carrousel, 5000);
 });
