@@ -66,8 +66,10 @@ $bg-gradient-progress-bar: linear-gradient(120deg, #ddd, #fff var(--data-percent
 $brand-min-gradient: linear-gradient(2deg, #e5e5e5 15%, #83ffeee5 50%, #b0f8ef 85%, #e5e5e5);
 
 // BoxAndTxt Shadows
-$box-shadw-light-top-left: 0 10px 80px -10px rgb(44 54 92 / 20%);
+$box-shadw-light-bottom-right: 0 10px 80px -10px rgb(44 54 92 / 20%);
+$box-shadw-light-bottom-left: -110px 150px 70px -90px rgb(44 54 92 / 20%);
 $box-shadw-light-top-right: 0 10px 80px -10px rgb(44 54 92 / 20%);
+$box-shadw-light-top-left: 0 10px 80px -10px rgb(44 54 92 / 20%);
 $txt-shadow-brand: -2px 8px 15px rgba(23, 23, 23, 0.12);
 
 // Transitions Timmers - Lifetime Effects

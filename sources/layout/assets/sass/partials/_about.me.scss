@@ -12,11 +12,11 @@ section.about-me {
     .card {
         color: $about-me-card-foreground;
         padding: 110px 100px;
-        
-        &:not(.expand-out) {
+
+        &:not(.expand-out).slide-active {
             border-radius: 15px;
 
-            @extend .box-shadow-light-top-right;
+            @extend .box-shadow-light-bottom-left;
         }
 
         transition: .93s ease-out;
@@ -113,6 +113,11 @@ section.about-me {
 
         .title {
             font-size: 2.3em;
+            line-height: 1.17;
+        }
+
+        .paragraph {
+            margin: 17px 0 30px;
         }
     }
 }
