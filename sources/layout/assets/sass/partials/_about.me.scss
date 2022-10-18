@@ -23,17 +23,13 @@ section.about-me {
     }
 
     .title {
-        font-family: $font-about-me-heading;
-        font-weight: 400;
-        font-size: 5.43em;
+        font: $font-about-me-heading;
     }
 
     .paragraph {
-        letter-spacing: 1.5;
-        font-family: $font-about-me-paragraph;
-        font-style: italic;
-        font-size: 1.43em;
+        font: $font-about-me-paragraph;
         margin: 23px 0 30px;
+        letter-spacing: 1.5;
     }
 
     img.complete-avatar {
