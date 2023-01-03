@@ -1,0 +1,34 @@
+.profile {
+    @include flexbox($justify: center, $alignment: right);
+
+    .graph-area {
+        width: 40%;
+
+        img {
+            background-color: gainsboro;
+            height: 190px;
+            width: 190px;
+        }
+    }
+
+    .abstract-area {
+        width: 40%;
+        
+        .title {
+            color: lighten(dodgerblue, 11);
+            font: $font-profile-title;
+        }
+        
+        .pharagraph {
+            font: $font-profile-paragraph;
+            margin-top: 17px;
+            text-align: justify;
+        }
+
+        .btn {
+            color: whitesmoke;
+            font: $font-profile-download;
+            margin-top: 5px;
+        }
+    }
+}
