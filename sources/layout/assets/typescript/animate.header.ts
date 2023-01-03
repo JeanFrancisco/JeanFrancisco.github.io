@@ -43,7 +43,7 @@ class AutomaticallyPrintableText extends PrintableText implements AutoOutput {
         readonly start_empty:boolean = true,
         readonly infinity_loop: boolean = true,
         readonly start_delay_ms:number = 200,
-        readonly step_sleep_ms:number = 200) {
+        readonly step_sleep_ms:number = 250) {
 
             super(full_text, printable_area);
 
