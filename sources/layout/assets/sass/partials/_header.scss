@@ -31,10 +31,9 @@ header {
 
         .brand {
             left: $body-padding;
-            font-size: 3rem;
-            font-family: $font-friendly;
             text-shadow: $txt-shadow-brand;
             transform: translate(0, -35%);
+            font: 100 3rem/1.1 $font-poiret;
 
             transition: .4s ease-out;
         }
@@ -49,9 +48,7 @@ header {
         left: 50%;
         color: $header-brand-foreground;
         position: absolute;
-        font-size: 15vw;
-        font-family: $font-principal;
-        line-height: 1.1;
+        font: 100 15vw/1.1 $font-raleway;
 
         transform: translate(-50%, -50%);
         transition: 0.47s;

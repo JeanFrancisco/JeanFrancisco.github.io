@@ -38,14 +38,20 @@ section.my-skills {
         }
 
         .skill-name {
-            font-weight: bolder;
-            font-family: $font-raleway;
+            font-weight: normal;
+            font-family: $font-montserrat-alt;
             text-shadow: 0 0 0 rgb(0 0 0 / .95);
         }
 
         .description {
+            font: 700 1.135em / 1.5 $font-poiret;
             height: 40%;
-            font: 1.135em / 1.5 $font-quicksand;
+            letter-spacing: 0.05em;
+
+            strong {
+                text-shadow: 1px -1px black;
+                letter-spacing: 0.07em;
+            }
         }
 
         &:nth-child(odd) {
@@ -76,7 +82,7 @@ section.my-skills {
         h2 {
             color: #fff;
             font-size: 2.4em;
-            font-family: $font-alternate;
+            font-family: $font-heading;
             font-variant: small-caps;
             margin-bottom: 30px;
         }
@@ -84,7 +90,7 @@ section.my-skills {
         .lang-name {
             margin-top: 3px;
             color: #fff;
-            font: normal 1.3em $font-comfortaa;
+            font: normal 1.3em $font-montserrat-alt; /* $font-comfortaa; */
         }
 
         .progress-bar {
@@ -112,7 +118,7 @@ section.my-skills {
         }
 
         .description {
-            font: 1.04em $font-alternate;
+            font: 1.04em $font-montserrat-alt;
             color: #fff;
             letter-spacing: 0.97px;
             margin-bottom: 4px;
