@@ -1,19 +1,17 @@
 .profile {
-    @include flexbox($justify: center, $alignment: right);
+    @include flexbox($justify: center, $alignment: center);
 
     .graph-area {
         width: 40%;
 
         img {
-            background-color: gainsboro;
-            height: 190px;
-            width: 190px;
+            max-height: 70%;
         }
     }
 
     .abstract-area {
         width: 40%;
-        
+
         .title {
             color: lighten(dodgerblue, 11);
             font: $font-profile-title;
@@ -26,9 +24,9 @@
         }
 
         .btn {
-            color: whitesmoke;
+            color: darken($color: azure, $amount: 10);
             font: $font-profile-download;
-            margin-top: 5px;
+            margin-top: 34px;
         }
     }
 }

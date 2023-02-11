@@ -13,9 +13,9 @@ $font-common: $font-quicksand;
 $font-nav-menu-link: 100 1.22rem $font-montserrat-alt;
 $font-about-me-heading: normal 5.43em $font-montserrat-alt;
 $font-about-me-paragraph: italic 1.43em $font-outstanding;
-$font-profile-paragraph: normal 1.33em $font-leading;
-$font-profile-download: bolder 1.33em $font-leading;
-$font-profile-title: bold 1.73em $font-montserrat-alt;
+$font-profile-paragraph: 300 1.33em $font-quicksand;
+$font-profile-download: 700 1.33em $font-outstanding;
+$font-profile-title: 300 1.73em $font-montserrat-alt;
 
 // Size - Dimensions
 
@@ -71,7 +71,7 @@ $brand-min-gradient: linear-gradient(2deg, #e5e5e5 15%, #83ffeee5 50%, #b0f8ef 8
 
 // BoxAndTxt Shadows
 $box-shadw-light-bottom-right: 0 10px 80px -10px rgb(44 54 92 / 20%);
-$box-shadw-light-bottom-left: -110px 150px 90px -100px rgb(44 54 92 / 20%);
+$box-shadw-light-bottom-left: -110px 150px 90px -100px rgb(44 54 92 / 15%);
 $box-shadw-light-top-right: 0 10px 80px -10px rgb(44 54 92 / 20%);
 $box-shadw-light-top-left: 0 10px 80px -10px rgb(44 54 92 / 20%);
 $txt-shadow-brand: -2px 8px 15px rgba(23, 23, 23, 0.12);
