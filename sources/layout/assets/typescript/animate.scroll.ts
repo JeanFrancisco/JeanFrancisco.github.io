@@ -1,16 +1,20 @@
+function isOnScreen(elem: Element, almost_pixels: number = 700) {
+    return almost_pixels >= elem.getBoundingClientRect().top;
+}
+
 function animateProgressLanguageBars() {
     const languageBars = document.querySelectorAll('.languages .progress-bar');
 
     languageBars.forEach( progressBar => {
-        let isOnScreen = 700 >= progressBar.getBoundingClientRect().top;
-        progressBar.classList.toggle( 'filled', isOnScreen )
+        let readyToAnimate = isOnScreen(progressBar);
+        progressBar.classList.toggle( 'filled', readyToAnimate )
     });
 }
 
 function decideFillLangBars() {
     const langSkillSet = document.querySelector('.languages');
 
-    const isVissibleSection = 700 >= langSkillSet.getBoundingClientRect().top;
+    const isVissibleSection = isOnScreen(langSkillSet);
 
     if( isVissibleSection )
         animateProgressLanguageBars();
