@@ -4,8 +4,8 @@ window.addEventListener('scroll', () => {
     const cards = aboutme.querySelectorAll('.card');
     const top = aboutme.getBoundingClientRect().top;
 
-    const setExpandableImg = (window.scrollY > 5 && top > -45);
-    const setExpandableCard = (window.scrollY > 23 && top > -110);
+    const setExpandableImg = (top > -45);
+    const setExpandableCard = (top > -50);
 
     avatarImage.classList.toggle('expand-out', setExpandableImg);
     cards.forEach(card => card.classList.toggle('expand-out', setExpandableCard) );

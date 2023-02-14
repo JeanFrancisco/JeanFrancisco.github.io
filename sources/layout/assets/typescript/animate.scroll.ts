@@ -1,5 +1,5 @@
-function isOnScreen(elem: Element, almost_pixels: number = 700) {
-    return almost_pixels >= elem.getBoundingClientRect().top;
+function isOnScreen(elem: Element, almost_pixels: number = 30) {
+    return ( window.innerHeight - almost_pixels ) >= elem.getBoundingClientRect().top;
 }
 
 function animateProgressLanguageBars() {
