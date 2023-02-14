@@ -1,17 +1,19 @@
-function animateProgressLanguageBars(force: boolean) {
+function animateProgressLanguageBars() {
     const languageBars = document.querySelectorAll('.languages .progress-bar');
 
-    languageBars.forEach( progressBar =>
-        progressBar.classList.toggle( 'filled', force )
-    );
+    languageBars.forEach( progressBar => {
+        let isOnScreen = 700 >= progressBar.getBoundingClientRect().top;
+        progressBar.classList.toggle( 'filled', isOnScreen )
+    });
 }
 
 function decideFillLangBars() {
     const langSkillSet = document.querySelector('.languages');
 
-    const forceFill = 700 >= langSkillSet.getBoundingClientRect().top;
+    const isVissibleSection = 700 >= langSkillSet.getBoundingClientRect().top;
 
-    animateProgressLanguageBars(forceFill);
+    if( isVissibleSection )
+        animateProgressLanguageBars();
 }
 
 window.addEventListener('scroll', () => {
