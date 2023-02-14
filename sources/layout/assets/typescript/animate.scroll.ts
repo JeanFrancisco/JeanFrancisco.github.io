@@ -9,7 +9,7 @@ function animateProgressLanguageBars(force: boolean) {
 function decideFillLangBars() {
     const langSkillSet = document.querySelector('.languages');
 
-    const forceFill = window.scrollY >= langSkillSet.getBoundingClientRect().top + 150;
+    const forceFill = 700 >= langSkillSet.getBoundingClientRect().top;
 
     animateProgressLanguageBars(forceFill);
 }

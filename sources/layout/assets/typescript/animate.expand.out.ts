@@ -8,5 +8,5 @@ window.addEventListener('scroll', () => {
     const setExpandableCard = (window.scrollY > 23 && top > -110);
 
     avatarImage.classList.toggle('expand-out', setExpandableImg);
-    cards.forEach(card => card.classList.toggle('expand-out', !setExpandableCard) );
+    cards.forEach(card => card.classList.toggle('expand-out', setExpandableCard) );
 });
