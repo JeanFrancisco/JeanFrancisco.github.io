@@ -58,7 +58,7 @@
     justify-content: $justify;
 }
 
-@mixin position-absolute-center {
+@mixin center-position-absolute {
     top: 50%;
     left: 50%;
     position: absolute;
@@ -76,7 +76,15 @@
         position: absolute;
     }
 
-    @content
+    @content;
+}
+
+@mixin bind-height-navigation-bar($navigation-height) {
+    height: $navigation-height;
+
+    & ~ * {
+        margin-top: $navigation-height;
+    }
 }
 
 @mixin explode-outside {

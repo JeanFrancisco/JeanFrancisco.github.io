@@ -16,12 +16,8 @@ header {
     }
 
     &.sticky {
-        height: $nav-height;
+        @include bind-height-navigation-bar($nav-height);
         z-index: 1;
-
-        & ~ * {
-            margin-top: $nav-height;
-        }
 
         &.bg-gradient {
             background: linear-gradient(to top,
@@ -58,7 +54,7 @@ header {
 @media screen and (max-height: $screen-sm) {
     header {
         &.sticky {
-            height: 98px;
+            @include bind-height-navigation-bar(98px);
         }
     }
 }
@@ -66,7 +62,7 @@ header {
 @media screen and (max-width: $screen-xxl) {
     header {
         &.sticky {
-            height: 100px;
+            @include bind-height-navigation-bar(100px);
 
             .brand {
                 font-size: 2.5em;
@@ -80,7 +76,7 @@ header {
         height: 100vh;
 
         &.sticky {
-            height: 94px;
+            @include bind-height-navigation-bar(94px);
 
             nav {
                 display: none;
@@ -100,9 +96,19 @@ header {
 
 @media screen and (max-width: $screen-md) {
     header {
+        &.sticky {
+            @include bind-height-navigation-bar(80px);
+
+            .brand {
+                @include center-position-absolute;
+                font-size: 2.4em;
+                top: 38%;
+            }
+        }
+
         .brand {
             top: auto;
-            bottom: 33%;
+            bottom: 30%;
         }
     }
 }
