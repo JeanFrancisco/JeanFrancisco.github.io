@@ -12,15 +12,10 @@ nav.navbar {
         padding: 45px 0 45px 45px;
     }
 
-    .nav-menu > li:nth-child(2) {
-        min-width: 140px;
-    }
-
     .menu-link {
         color: #fff;
         font: $font-nav-menu-link;
         letter-spacing: 1px;
-        padding: 10px 20px;
 
         @include pseudo-elements;
 
