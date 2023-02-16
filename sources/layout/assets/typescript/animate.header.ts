@@ -138,7 +138,7 @@ window.addEventListener('load', automaticPrintBannerWelcomeText);
 function automaticPrintBannerWelcomeText() {
     const area_HTML = getHTMLElementContainerAutoMessage();
 
-    const text_chain = ['Welcome', "I'm dev", "Jean Francesco"];
+    const text_chain = ['Welcome', "Hi, I'm a Dev.", "Jean Francesco"];
 
     const printable = text_chain.reduceRight((previous: AutomaticallyPrintableText, txt:string) => {
 
