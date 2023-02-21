@@ -1,7 +1,7 @@
 section.my-skills#my-skills
     each skill in mySkills
         .container.box
-            img.image.circle(src=`${ skill.imageSrc }`, alt=`${ skill.name } icon.`)
+            img.image(src=`${ skill.imageSrc }`, alt=`${ skill.name } icon.`)
             h3.skill-name= skill.name
             p.description !{skill.description}
     .languages.box

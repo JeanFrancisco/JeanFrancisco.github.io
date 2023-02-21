@@ -103,6 +103,8 @@ function animatedPrintingText(autoTxtObj: AutomaticallyPrintableText) {
 
             const printable_area = autoTxtObj.getPrintableArea();
 
+            if(! printable_area ) return;
+
             if( autoTxtObj.isEmptyPrinted() && autoTxtObj.is_deleting ) {
                 clearInterval(word_active_timming);
 

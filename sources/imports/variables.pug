@@ -9,31 +9,93 @@
 
     let avatarProfessionalImage='./images/Programming-bro.svg';
     let avatarFriendlyImage='./images/developer-activity-animate.svg';
+    let folderSkillIcon ='./images/';
 
     let mySkills= [
-        { imageSrc: '', name: 'Teamwork', description: `<em>Flexible</em>, con buena comunicación y abierto al trabajo
-        en equipo. Apertura a la retroalimentación, compartiendo opiniones, y en un ambiente de continua y oportuna
-        revisión del código.` },
-        { imageSrc: '', name: 'FullStack Development', description: `Una mezcla entre <strong>Frontend + Backend +
-        Databases</strong> hasta <strong>IT Operations,</strong> ¡vamos que en DevOps aún soy un Junior!, pero el resto a un nivel Middle.` },
-        { imageSrc: '', name: 'Attention to Detail', description: `<strong><em>Perfect match & optimized aplication</em>
-        </strong> de estilo y/o diseño, basado en un mockup/wireframe, a su respectiva implementación en Web.` },
-        { imageSrc: '', name: 'Inspect & Debug', description: `<strong>Análisis y Resolución de problemas</strong>
-        o errores con el apoyo de herramientas de Depuración e Inspección Profesionales.` },
-        { imageSrc: '', name: 'Clean Code', description: `Código limpio, poco verboso, expresivo y con buena
-        <em>indentation</em>; inspirado en código de proyectos Open Source profesionales como Laravel, HAML o ScSS.` },
-        { imageSrc: '', name: 'Testing', description: `Creación de <strong>Pruebas unitarias y de integración</strong> con
-        la configuración necesaria para su ejecución automatizada.` },
-        { imageSrc: '', name: 'VCS', description: `Sistema de Control de versiones soportado por herramientas de control
-        de versiones como: <strong>Git</strong> + <em>Server Cloud Repositories</em>` },
+        //meeting.png
+        //meeting.svg
+        { 
+            name: 'Teamwork',
+            imageSrc: folderSkillIcon + 'global-team.svg',
+            description: `<em>Flexible</em>, una buena comunicación y abierto al trabajo en equipo.
+            Apertura a la retroalimentación, compartiendo opiniones, siempre en un ambiente de oportuna
+            y continua revisión del código.` },
+        // layer.png
+        // backend (1).png
+        // full-stack.png
+        {
+            name: 'FullStack Development',
+            imageSrc: folderSkillIcon + 'layer.png',
+            description: `Una mezcla entre <strong>Frontend + Backend + Databases</strong>
+            hasta <strong>IT Operations,</strong> ¡vamos que en DevOps aún soy un Junior!,
+            pero el resto soy nivel Middle.` },
+        // investigation.png
+        // seo.png
+        // eye-test_3.png
+        // loupe.png
+        // eye-scan (2).png
+        // examine.png
+        // transparency.png
+        // search_1.png
+        // verification.png
+        // observation (1).png
+        // inspection (1).png
+        // audit.png
+        // scan.png
+        { 
+            name: 'Attention to Detail',
+            imageSrc: folderSkillIcon + 'eye-scan (2).png',
+            description: `<strong><em>Perfect match & optimized aplication</em></strong>
+            de estilo y/o diseño, basado en un mockup/wireframe, a su respectiva implementación en Web.` },
+        // debugging.png
+        // debugging (1).png
+        {
+            name: 'Inspect & Debug',
+            imageSrc: folderSkillIcon + 'debugging.png',
+            description: `<strong>Análisis y Resolución de problemas/errores</strong> en el código o
+            el navegador con apoyo de herramientas de Depuración e Inspección Profesionales.` },
+        //disinfect.png'
+        //clean-code.png'
+        {
+            name: 'Clean Code',
+            imageSrc: folderSkillIcon + 'clean-code.png',
+            description: `Código limpio, poco verboso, expresivo y con buena <em>indentation</em>;
+            inspirado en código de proyectos Open Source profesionales como Laravel, HAML o ScSS.` },
+        // inspection.png
+        // verification.png
+        // devops (1).png
+        {
+            name: 'Testing',
+            imageSrc: folderSkillIcon + 'inspection.png',
+            description: `Creación de <strong>Pruebas unitarias y de integración</strong>
+            con la configuración necesaria para su ejecución automatizada.` },
+        // unir.png
+        // unir(1).png
+        // rama.png
+        { 
+            name: 'VCS',
+            imageSrc: folderSkillIcon + 'unir(1).png',
+            description: `Sistema de Control de versiones soportado por herramientas de control
+            de versiones como: <strong>Git</strong> + <em>Cloud Repository Server</em>` },
         //- { imageSrc: '', name: 'OOP + EDP', description: `Paradigma de <strong>Programación Orientada a Objetos</strong>, con
         //- creación de instancias de clases. Y además, su correspondiente vinculación con diversos ORMs. <em>También</em>, 
         //- Programación Dirigida por Eventos o Programación Funcional.` },
-        { imageSrc: '', name: 'Design Patterns | Principles', description: `Diversos <strong>Patrones de Diseño de Software</strong>
-        entre ellos el patrón MVC (Modelo-Vista-Controlador), Flux, entre otros. Actualmente aprendiendo a aplicar
-        <strong>Principios de Diseño</strong> SOLID, DRY, KISS, etc.` },
-        { imageSrc: '', name: 'CI +/ CD', description: `<em><strong>Continuos Integration + Continuos Deployment</strong></em>
-        Experiencia en ambientes de integración continua y depliegues continuos a producción y/o pruebas.` },
+        // coding.png
+        {
+            name: 'Design Principles | Patterns',
+            imageSrc: folderSkillIcon + 'software.png',
+            description: `Diversos <strong>Patrones de Arquitectura de Software</strong>
+            entre ellos el patrón MVC (Modelo-Vista-Controlador), Flux, entre otros.
+            Actualmente aprendiendo a aplicar <strong>Principios de Diseño</strong>
+            SOLID, DRY, KISS, etc.` },
+        // devops (1).png
+        // continuous.png
+        // segmented-circle-arrow.png
+        {
+            name: 'CI +/ CD',
+            imageSrc: folderSkillIcon + 'devops (1).png',
+            description: `<em><strong>Continuos Integration + Continuos Deployment</strong></em>
+            Experiencia en ambientes de integración continua y depliegues continuos a producción y/o pruebas.` },
     ];
 
     let languages= [
