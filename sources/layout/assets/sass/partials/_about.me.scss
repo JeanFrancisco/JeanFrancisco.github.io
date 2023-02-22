@@ -1,8 +1,6 @@
 section.about-me {
-    @include flexbox($justify: space-between, $alignment: center);
-    position: relative;
+    @include flexbox($justify: space-around, $alignment: center);
     padding: $nav-height $body-padding 90px;
-    // height: 100vh;
     width: 100%;
 
     .carousel {
@@ -11,7 +9,7 @@ section.about-me {
 
     .card {
         color: $about-me-card-foreground;
-        padding: 50px 100px;
+        padding: 50px 5% 50px 100px;
 
         &:not(.expand-out).slide-active {
             border-radius: 15px;
@@ -49,14 +47,12 @@ section.about-me {
 
 @media screen and (max-width: $screen-xxl) {
     section.about-me {
-        padding: 0 5%;
-
         .card {
-            padding: 70px;
+            padding: 40px 8% 45px 70px;
         }
 
         .carousel {
-            width: 85%;
+            width: auto;
         }
 
         .title {
@@ -79,20 +75,34 @@ section.about-me {
         .title {
             font-size: 3.2em;
         }
+
+        img.complete-avatar {
+            max-width: 29%;
+            transform: scale(170%);
+
+            &.expand-out {
+                transform: scale(140%);
+            }
+        }
     }
 }
 
 @media screen and (max-width: $screen-lg) {
     section.about-me {
-        flex-direction: column;
-        padding: 5%;
+        flex-direction: column-reverse;
+        padding: 2.5%;
 
         .carousel {
             width: 100%;
         }
 
+        .card {
+            padding: 10px 70px;
+        }
+
         .paragraph {
             font-size: 1.3em;
+            text-align: justify;
         }
 
         img.complete-avatar {
@@ -108,16 +118,13 @@ section.about-me {
 @media screen and (max-width: $screen-md) {
     section.about-me {
         .card {
-            padding: 70px 30px;
+            padding: 40px 8%;
         }
 
         .title {
             font-size: 2.3em;
+            text-align: center;
             line-height: 1.17;
-        }
-
-        .paragraph {
-            margin: 17px 0 30px;
         }
     }
 }

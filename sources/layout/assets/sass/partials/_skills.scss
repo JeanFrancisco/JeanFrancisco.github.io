@@ -3,7 +3,7 @@ section.my-skills {
     min-height: 100vh;
     grid-template-columns: repeat(3, 1fr);
     display: grid;
-    gap: 2.5%;
+    column-gap: 2.5%;
 
     .container.box {
         @include flexbox($alignment: center, $justify: space-around);
@@ -151,8 +151,7 @@ section.my-skills {
 
 @media screen and (max-width: $screen-xl) {
     section.my-skills {
-        gap: 5%;
-        padding-top: 0;
+        column-gap: 5.7%;
         grid-template-columns: repeat(2, 1fr);
 
         .container.box {
@@ -182,10 +181,6 @@ section.my-skills {
 
 @media screen and (max-width: $screen-lg) {
     section.my-skills {
-        row-gap: 0;
-        margin-top: 10%;
-        padding-top: $body-padding;
-
         .container.box {
             .skill-name,
             .description {
@@ -209,8 +204,7 @@ section.my-skills {
 
 @media screen and (max-width: $screen-md) {
     section.my-skills {
-        gap: 5%;
-        padding-top: 0;
+        gap: 4%;
         grid-template-rows: auto;
         grid-template-columns: 100%;
 

@@ -11,6 +11,8 @@
 
     .abstract-area {
         width: 40%;
+        display: flex;
+        flex-direction: column;
 
         .title {
             color: lighten(dodgerblue, 11);
@@ -27,6 +29,31 @@
             color: darken($color: azure, $amount: 10);
             font: $font-profile-download;
             margin-top: 34px;
+            align-self: center;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    .profile {
+        padding: 0 5%;
+        flex-direction: column;
+
+        .graph-area {
+            width: 50%;
+        }
+
+        .abstract-area {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    .profile {
+
+        .graph-area {
+            width: 70%;
         }
     }
 }
