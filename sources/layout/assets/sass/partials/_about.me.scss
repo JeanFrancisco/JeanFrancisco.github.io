@@ -27,7 +27,11 @@ section.about-me {
     .paragraph {
         font: $font-about-me-paragraph;
         margin: 23px 0 30px;
-        letter-spacing: 0.034em;
+        letter-spacing: 0.045em;
+
+        strong {
+            @include force-strong;
+        }
     }
 
     img.complete-avatar {

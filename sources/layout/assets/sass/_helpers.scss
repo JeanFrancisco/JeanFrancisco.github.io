@@ -65,6 +65,10 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin force-strong {
+    text-shadow: 1px -1px black;
+}
+
 @mixin pseudo-elements {
     & {
         position: relative;

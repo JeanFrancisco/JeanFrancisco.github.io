@@ -15,7 +15,6 @@
         flex-direction: column;
 
         .title {
-            color: lighten(dodgerblue, 11);
             font: $font-profile-title;
         }
         
@@ -23,6 +22,7 @@
             font: $font-profile-paragraph;
             margin-top: 17px;
             text-align: justify;
+            letter-spacing: 0.044em;
         }
 
         .btn {

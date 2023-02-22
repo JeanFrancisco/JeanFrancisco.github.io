@@ -10,12 +10,27 @@ $font-heading: $font-montserrat-alt;
 $font-outstanding: $font-poiret;
 $font-common: $font-quicksand;
 
+// Light Style
+
 $font-nav-menu-link: 100 1.22rem $font-quicksand;
-$font-about-me-heading: normal 5.43em $font-montserrat-alt;
-$font-about-me-paragraph: 500 italic 1.43em $font-outstanding;
-$font-profile-paragraph: 300 1.33em $font-quicksand;
+$font-about-me-heading: normal 5.43em $font-heading;
+$font-about-me-paragraph: 500 italic 1.4em / 1.25 $font-outstanding;
+$font-profile-paragraph: 300 1.2em / 1.51 $font-common;
 $font-profile-download: 700 1.33em $font-outstanding;
-$font-profile-title: 300 1.73em $font-montserrat-alt;
+$font-profile-title: 300 2.183em $font-heading;
+$font-skills-name: 1.19em / 1.74 $font-heading;
+$font-skills-description: 200 1.19em / 1.52 $font-common;
+
+// Bold Style 
+
+// $font-nav-menu-link: 100 1.22rem $font-quicksand;
+// $font-about-me-heading: normal 5.43em $font-heading;
+// $font-about-me-paragraph: 700 italic 1.4em / 1.25 $font-outstanding;
+// $font-profile-paragraph: 400 1.27em / 1.51 $font-common;
+// $font-profile-download: 700 1.33em $font-outstanding;
+// $font-profile-title: 500 2.183em $font-heading;
+// $font-skills-name: 1.19em / 1.74 $font-heading;
+// $font-skills-description: 200 1.19em / 1.52 $font-common;
 
 // Size - Dimensions
 
