@@ -1,0 +1,78 @@
+section.roles {
+    width: 90%;
+    margin: 0 7%;
+    display: grid;
+    counter-increment: box-counter;
+    grid-template: repeat(auto-fill, minmax(20px, 30px) ) / repeat(5, minmax(200px, 1fr));
+    grid-template-areas:
+    "a . . . e"
+    "a b . d e"
+    "a b c d e"
+    ". b c d ." ;
+    gap: 4% 5%;
+
+    .box:nth-child(1) {
+        grid-area: a;
+    }
+
+    .box:nth-child(2) {
+        grid-area: b;
+    }
+
+    .box:nth-child(3) {
+        grid-area: c;
+    }
+
+    .box:nth-child(4) {
+        grid-area: d;
+    }
+
+    .box:nth-child(5) {
+        grid-area: e;
+    }
+
+    .role-name {
+        font: 400 1.13em / 1.7 $font-montserrat-alt;
+        text-transform: uppercase;
+    }
+
+    .skill-bullet {
+        font: 300  20px / 1.7em $font-quicksand;
+        list-style-type: disc;
+    }
+}
+
+@media screen and (max-width: $screen-xl) {
+    section.roles {
+        gap: 5% 20%;
+        margin: 0 9%;
+        grid-template-areas:
+        "a . c"
+        "a b c"
+        "d b e"
+        "d . e";
+    }
+}
+
+@media screen and (max-width: $screen-lg) {
+    section.roles {
+        display: block;
+        margin: 0 auto;
+        line-height: 1.4em;
+
+        .role-name {
+            padding: 15px 350px;
+            font-size: 1.3em;
+            text-align: center;
+            backdrop-filter: blur(30px);
+            position: sticky !important;
+            top: 90px;
+        }
+
+        .skill-bullet {
+            margin: 0 45%;
+            min-width: 150px;
+
+        }
+    }
+}
