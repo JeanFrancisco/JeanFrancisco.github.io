@@ -1,0 +1,22 @@
+footer {
+    margin: 0 auto 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+        text-align: center;
+    }
+
+    .made-with-love {
+        font: 300 1.3em / 1.73 $font-raleway;
+    }
+
+    .all-rights-reserved {
+        font: 300 1em / 1.15 $font-raleway;
+    }
+
+    .copyright-notice {
+        font: 700 18px / 1.5 $font-raleway;
+    }
+}

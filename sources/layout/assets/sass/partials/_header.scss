@@ -10,7 +10,7 @@ header {
 
     transition: $sticky-effect-duration;
 
-    & ~ * {
+    & + * {
         margin-top: 100vh;
         transition: $sticky-effect-duration;
     }

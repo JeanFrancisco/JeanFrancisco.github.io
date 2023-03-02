@@ -86,7 +86,7 @@
 @mixin bind-height-navigation-bar($navigation-height) {
     height: $navigation-height;
 
-    & ~ * {
+    & + * {
         margin-top: $navigation-height;
     }
 }
