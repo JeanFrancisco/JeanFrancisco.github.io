@@ -1,0 +1,21 @@
+section.contact {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    margin: 0 auto 15px auto;
+    width: 90%;
+    gap: 3%;
+
+    .contact-mean {
+        img {
+            &[alt="WhatsApp"] {
+                height: 70px;
+            }
+
+            &[alt="GitHub"] {
+                height: 50px;
+            }
+        }
+    }
+}

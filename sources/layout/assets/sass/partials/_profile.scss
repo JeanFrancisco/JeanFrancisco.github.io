@@ -27,6 +27,7 @@
 
         .btn {
             color: darken($color: azure, $amount: 10);
+            cursor: pointer;
             font: $font-profile-download;
             margin-top: 34px;
             align-self: center;
