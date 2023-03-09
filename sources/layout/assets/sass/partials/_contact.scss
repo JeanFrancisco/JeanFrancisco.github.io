@@ -1,20 +1,41 @@
 section.contact {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
-    margin: 0 auto;
-    width: 90%;
-    gap: 3%;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 5% 10px auto;
+    width: 87%;
+    gap: 2%;
+
+    .contact-me {
+        text-align: right;
+        align-self: flex-start;
+        flex: 1 0 100%;
+        font: 500 1.23em / 2.7 $font-montserrat-alt;
+    }
 
     .contact-mean {
+        a {
+            &[href^="mailto:"] {
+                font-size: 50px;
+                line-height: 0.7;
+            }
+        }
+
         img {
-            &[alt="WhatsApp"] {
+            &[alt~="WhatsApp"] {
                 height: 70px;
+                margin-right: -20px;
             }
 
-            &[alt="GitHub"] {
-                height: 50px;
+            &[alt~="GitHub"] {
+                height: 47px;
+            }
+
+            &[alt~="LinkedIn"] {
+                height: 49px;
+                margin-right: -8px;
             }
         }
     }

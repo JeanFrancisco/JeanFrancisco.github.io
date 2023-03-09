@@ -20,3 +20,20 @@ footer {
         font: 700 18px / 1.5 $font-raleway;
     }
 }
+
+@media screen and (max-width: $screen-lg) {
+    footer {
+        .made-with-love {
+            font-size: 1.2em;
+        }
+
+        .all-rights-reserved {
+            line-height: 2;
+        }
+
+        .copyright-notice {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    }
+}

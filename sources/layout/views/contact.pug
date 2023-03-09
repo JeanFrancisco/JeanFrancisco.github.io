@@ -1,7 +1,14 @@
 section.contact#contact
-    .contact-mean 
-        a(href="https://github.com/JeanFrancisco") 
-            img(src="./images/github-mark.svg", alt="GitHub", srcset="")
+    p.contact-me Contact me on:
     .contact-mean
-        a(href="https://wa.me/521XXXXXXXXX") 
-            img(src="./images/WhatsAppButtonWhiteMedium.svg", alt="WhatsApp")
+        a(href=`https://wa.me/${ smartphoneNumber }`) 
+            img(src="./images/WhatsAppButtonWhiteMedium.svg", alt="Send me a WhatsApp Message")
+    .contact-mean 
+        a(href=`https://github.com/${ userSlugAtGitHub }`)
+            img(src="./images/github-mark.svg", alt="GitHub", srcset="")
+    .contact-mean 
+        a(href=`mailto:${ userEmailAddress }`, alt="Send me an E-mail")
+            | 📬
+    .contact-mean
+        a(href=`https://mx.linkedin.com/in/${ userSlugAtLinkedIn }`)
+            img(src="./images/LI-In-Bug.png", alt="Visit me on my LinkedIn ®™ Profile")
