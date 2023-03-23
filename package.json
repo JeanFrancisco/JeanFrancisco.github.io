@@ -8,11 +8,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pug --watch -s -b \"./public/\" sources/index.pug -o public/",
-    "compile": "tsc --watch sources/layout/assets/typescript/*.ts --outDir public/assets/js/",
-    "preprocess": "sass --watch sources/layout/assets/sass/bootstrap.scss public/assets/css/bootstrap.css",
+    "build": "pug -s -b \"./public/\" sources/index.pug -o public/",
+    "compile": "tsc sources/layout/assets/typescript/*.ts --outDir public/assets/js/",
+    "preprocess": "sass sources/layout/assets/sass/bootstrap.scss public/assets/css/bootstrap.css",
     "start": "npm run compile & npm run preprocess & npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pug --watch -s -b \"./public/\" sources/index.pug -o public/ & tsc --watch sources/layout/assets/typescript/*.ts --outDir public/assets/js/ & sass --watch sources/layout/assets/sass/bootstrap.scss public/assets/css/bootstrap.css"
   },
   "devDependencies": {
     "pug": "^3.0.2",
