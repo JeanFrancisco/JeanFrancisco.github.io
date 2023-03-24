@@ -66,11 +66,11 @@ jobs:
         run: |
           pwd
           ls .
-          echo "- let userEmailAddress = " ${{ secrets._AUTHOR_EMAIL }} >> ./sources/imports/private.pug
-          echo "- let smartphoneNumber = " ${{ secrets._USER_PHONE }} >> ./sources/imports/private.pug
-          echo "- let userSlugAtGitHub = " ${{ vars._GITHUB_AUTHOR }} >> ./sources/imports/private.pug
-          echo "- let userSLugAtLinkedIn = " ${{ secrets._LINKEDIN_ACCOUNT }} >> ./sources/imports/private.pug
-          echo "- let curriculumVitaeLocation = " ${{ secrets._CV_URL }} >> ./sources/imports/private.pug
+          echo "- let userEmailAddress = " ${{ secrets._AUTHOR_EMAIL }} >> ./sources/imports/privates.pug
+          echo "- let smartphoneNumber = " ${{ secrets._USER_PHONE }} >> ./sources/imports/privates.pug
+          echo "- let userSlugAtGitHub = " ${{ vars._GITHUB_AUTHOR }} >> ./sources/imports/privates.pug
+          echo "- let userSLugAtLinkedIn = " ${{ secrets._LINKEDIN_ACCOUNT }} >> ./sources/imports/privates.pug
+          echo "- let curriculumVitaeLocation = " ${{ secrets._CV_URL }} >> ./sources/imports/privates.pug
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
