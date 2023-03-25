@@ -13,13 +13,13 @@ $font-common: $font-quicksand;
 // Light Style
 
 $font-nav-menu-link: 100 1.22rem $font-quicksand;
-$font-about-me-heading: normal 5.43em $font-heading;
-$font-about-me-paragraph: 500 italic 1.4em / 1.25 $font-outstanding;
-$font-profile-paragraph: 300 1.25em / 1.5 $font-common;
-$font-profile-download: 700 1.33em $font-outstanding;
-$font-profile-title: 300 2.183em $font-heading;
-$font-skills-name: 1.19em / 1.74 $font-heading;
-$font-skills-description: 200 1.19em / 1.52 $font-common;
+$font-about-me-heading: normal 5.43rem $font-heading;
+$font-about-me-paragraph: 500 italic 1.4rem / 1.25 $font-outstanding;
+$font-profile-paragraph: 300 1.25rem / 1.5 $font-common;
+$font-profile-download: 700 1.33rem $font-outstanding;
+$font-profile-title: 300 2.183rem $font-heading;
+$font-skills-name: 1.19rem / 1.74 $font-heading;
+$font-skills-description: 200 1.19rem / 1.52 $font-common;
 
 // Bold Style 
 
@@ -34,21 +34,22 @@ $font-skills-description: 200 1.19em / 1.52 $font-common;
 
 // Size - Dimensions
 
-$body-padding: 90px;
+$body-padding: 5em;
+$sticky-height: 5em;
+$header-padding: 5em;
 $body-height: auto;
 $body-width: 100vw;
-$nav-height: 110px;
 $skills-circle: 100px;
 
 $font-size: 1.8em;
 
 $screen-xxs: 360px;
 $screen-xs: 480px;
-$screen-sm: 520px;
-$screen-md: 640px;
-$screen-lg: 720px;
-$screen-xl: 940px;
-$screen-xxl: 1280px;
+$screen-sm: 720px;
+$screen-md: 920px;
+$screen-lg: 1080px;
+$screen-xl: 1280px;
+$screen-xxl: 1320px;
 
 // Colors Palette
 

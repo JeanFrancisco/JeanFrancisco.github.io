@@ -29,7 +29,7 @@ section.my-skills {
                     content: '</>';
                     background: darkblue;
 
-                    font-size: 3em;
+                    font-size: 3rem;
                     font-weight: 500;
                     line-height: 1.94;
                     text-align: center;
@@ -80,7 +80,7 @@ section.my-skills {
 
         h2 {
             color: #fff;
-            font-size: 2.4em;
+            font-size: 2.4rem;
             font-family: $font-heading;
             font-variant: small-caps;
             margin-bottom: 30px;
@@ -89,7 +89,7 @@ section.my-skills {
         .lang-name {
             margin-top: 3px;
             color: #fff;
-            font: normal 1.3em $font-montserrat-alt; /* $font-comfortaa; */
+            font: normal 1.3rem $font-montserrat-alt; /* $font-comfortaa; */
         }
 
         .progress-bar {
@@ -117,7 +117,7 @@ section.my-skills {
         }
 
         .description {
-            font: 1.04em $font-montserrat-alt;
+            font: 1.04rem $font-montserrat-alt;
             color: #fff;
             letter-spacing: 0.97px;
             margin-bottom: 4px;
@@ -172,7 +172,7 @@ section.my-skills {
 
         .languages.box {
             .description {
-                font-size: 1.02em;
+                font-size: 1.02rem;
             }
         }
     }
@@ -189,12 +189,12 @@ section.my-skills {
 
         .languages.box {
             .lang-name {
-                font-size: 1.2em;
+                font-size: 1.2rem;
             }
 
             .description {
                 letter-spacing: normal;
-                font-size: 1em;
+                font-size: 1rem;
                 color: #eee;
             }
         }
@@ -220,7 +220,7 @@ section.my-skills {
 
         .languages.box {
             .lang-name {
-                font-size: 1.3em;
+                font-size: 1.3rem;
             }
         }
     }
@@ -230,7 +230,7 @@ section.my-skills {
     section.my-skills {
         .languages.box {
             .lang-name {
-                font-size: 1.17em;
+                font-size: 1.17rem;
             }
 
             .progress-bar {
