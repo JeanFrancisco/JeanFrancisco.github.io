@@ -1,6 +1,6 @@
 section.about-me {
     @include flexbox($justify: space-around, $alignment: center);
-    padding: $nav-height $body-padding 90px;
+    padding: $body-padding;
     width: 100%;
 
     .carousel {

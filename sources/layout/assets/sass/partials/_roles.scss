@@ -61,11 +61,12 @@ section.roles {
         line-height: 1.4em;
 
         .role-name {
-            padding: 15px 350px;
+            padding: 15px 0;
             font-size: 1.3rem;
             text-align: center;
-            backdrop-filter: blur(30px);
+            backdrop-filter: blur(3px);
             position: sticky !important;
+            text-shadow: 1px 1px 7px #ffffff;
             top: 90px;
         }
 
