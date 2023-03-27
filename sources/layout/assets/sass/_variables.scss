@@ -59,8 +59,8 @@ $pistache: #90be78;
 $lavander: #c5c5d1;
 $turqouise: #09E1C0;
 $aquamarine: #22c1c3;
-$second_canary: rgb(253, 187, 45);
-$second_aquamarine: rgb(34, 193, 195);
+$second_canary: #ffb71e;// rgb(253, 187, 45);
+$second_aquamarine: #2edcdf;// rgb(34, 193, 195);
 
 $bg-neutral: #95A4C3;
 $bg-progress-bar: rgb(200 32 90 /.3);
@@ -87,7 +87,7 @@ $brand-min-gradient: linear-gradient(2deg, #e5e5e5 15%, #83ffeee5 50%, #b0f8ef 8
 
 // BoxAndTxt Shadows
 $box-shadw-light-bottom-right: 0 10px 80px -10px rgb(44 54 92 / 20%);
-$box-shadw-light-bottom-left: -110px 150px 90px -100px rgb(44 54 92 / 15%);
+$box-shadw-light-bottom-left: -110px 150px 90px -100px rgb(44 54 92 / 24%);
 $box-shadw-light-top-right: 0 10px 80px -10px rgb(44 54 92 / 20%);
 $box-shadw-light-top-left: 0 10px 80px -10px rgb(44 54 92 / 20%);
 $txt-shadow-brand: -2px 8px 15px rgba(23, 23, 23, 0.12);

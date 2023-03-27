@@ -76,7 +76,7 @@ section.my-skills {
 
         margin: 0 -100%;
         padding: 5% 100%;
-        height: calc( 100vh - $body-padding );
+        height: fit-content;
 
         h2 {
             color: #fff;
