@@ -64,16 +64,16 @@ section.roles {
             padding: 15px 0;
             font-size: 1.3rem;
             text-align: center;
+            border-radius: 15px 15px 0 0;
             backdrop-filter: blur(3px);
+            background-color: #ffffff;
             position: sticky !important;
-            text-shadow: 1px 1px 7px #ffffff;
-            top: 90px;
+            top: 3em;
         }
 
         .skill-bullet {
             margin: 0 45%;
             min-width: 150px;
-
         }
     }
 }

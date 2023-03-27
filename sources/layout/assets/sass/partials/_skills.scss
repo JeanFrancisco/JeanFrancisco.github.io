@@ -104,6 +104,7 @@ section.my-skills {
 
             width: 70%;
             height: 15px;
+            margin: 5px 0;
             background: $bg-progress-bar;
 
             &.filled {
@@ -144,7 +145,6 @@ section.my-skills {
             .progress-bar {
                 width: 75%;
                 height: 10px;
-                margin: 5px 0;
             }
         }
     }
