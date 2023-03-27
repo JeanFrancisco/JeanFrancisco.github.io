@@ -34,9 +34,9 @@ $font-skills-description: 200 1.19rem / 1.52 $font-common;
 
 // Size - Dimensions
 
-$body-padding: 5em;
+$body-padding: 5vw;
 $sticky-height: 5em;
-$header-padding: 5em;
+$header-padding: 5vw;
 $body-height: auto;
 $body-width: 100vw;
 $skills-circle: 100px;
@@ -81,6 +81,7 @@ $about-me-card-foreground: #000;
 $header-brand-foreground: #83ffee;
 
 // Background - Gradients
+$bg-gradient-role-names: linear-gradient(180deg, #ffffff, #ffffffaa);
 $bg-gradient-languages: linear-gradient(45deg, $bg-gradient-orange-fuchsia-start, $bg-gradient-orange-fuchsia-end);
 $bg-gradient-progress-bar: linear-gradient(120deg, #ddd, #fff var(--data-percent), transparent var(--data-percent));
 $brand-min-gradient: linear-gradient(2deg, #e5e5e5 15%, #83ffeee5 50%, #b0f8ef 85%, #e5e5e5);

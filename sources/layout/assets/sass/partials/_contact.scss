@@ -12,7 +12,7 @@ section.contact {
         text-align: right;
         align-self: flex-start;
         flex: 1 0 100%;
-        font: 500 1.23em / 2.7 $font-montserrat-alt;
+        font: 500 1.23rem / 2.7 $font-montserrat-alt;
     }
 
     .contact-mean {
@@ -37,6 +37,32 @@ section.contact {
                 height: 49px;
                 margin-right: -8px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: $screen-md) {
+    section.contact {
+        .contact-mean {
+            a {
+                &[href^="mailto:"] {
+                    font-size: 30px;
+                }
+            }
+
+            img {
+                &[alt~="WhatsApp"] {
+                    height: 50px;
+                }
+    
+                &[alt~="GitHub"] {
+                    height: 30px;
+                }
+    
+                &[alt~="LinkedIn"] {
+                    height: 30px;
+                }
+            }    
         }
     }
 }

@@ -9,6 +9,7 @@ section.my-skills {
         @include flexbox($alignment: center, $justify: space-around);
 
         flex-direction: column;
+        margin: 5px 0;
         height: 300px;
 
         .image {
@@ -212,6 +213,7 @@ section.my-skills {
 
             .description {
                 height: 40%;
+                text-align: justify;
             }
 
             &:nth-child(even),
