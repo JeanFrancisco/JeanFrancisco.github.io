@@ -43,6 +43,8 @@ section.contact {
 
 @media screen and (max-width: $screen-md) {
     section.contact {
+        width: auto;
+
         .contact-mean {
             a {
                 &[href^="mailto:"] {
