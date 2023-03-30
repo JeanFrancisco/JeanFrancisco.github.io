@@ -28,6 +28,10 @@ concurrency:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    # To work on the correct environment to be able for get the secrets.
+    environment:
+      name: github-pages
+
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
